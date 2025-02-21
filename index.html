@@ -14,6 +14,75 @@
     <title>Book Library</title>
 </head>
 <body>
+    <!-- Modal -->
+     <div class="modal-container">
+        <div class="modal">
+            <div class="close-modal">
+                <svg id="close_modal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+                    <path d="M18 6 6 18"/>
+                    <path d="m6 6 12 12"/>
+                </svg>
+            </div>
+            <h2 id="modal_title">Create Book</h2>
+            <form action="#" method="POST">
+    
+                <!-- Book Title -->
+                <label for="book_title">Book Title:</label>
+                <input type="text" 
+                        id="book_title" 
+                        name="book_title" 
+                        title="Only letters and spaces allowed, up to 99 characters."
+                        pattern="^[A-Za-z\s]{0,99}$" 
+                        placeholder="enter" 
+                        required>
+    
+                <!-- Page Count -->
+                <label for="page_count">Number of Pages:</label>
+                <input type="text" 
+                        id="page_count" 
+                        name="page_count" 
+                        title="Only numbers between 1 and 9999 allowed."
+                        pattern="^[1-9][0-9]{0,3}$"
+                        placeholder="enter" 
+                        required>
+    
+                <!-- Author's Name -->
+                <label for="author_name">Author's Name:</label>
+                <input type="text" 
+                        id="author_name" 
+                        name="author_name" 
+                        title="Only letters, spaces, and dots allowed. Must be between 1-99 characters."
+                        pattern="^[A-Za-z\s.]{1,99}$" 
+                        placeholder="enter" 
+                        required>
+    
+                <!-- Book Description -->
+                <label for="book_description">Description:</label>
+                <textarea id="book_description" 
+                            name="book_description" 
+                            cols="50" rows="5"
+                            placeholder="enter" 
+                            required></textarea>
+                
+                <!-- Read/Unread Selection -->
+                <div class="radio-group">
+                    <label>Reading Status:</label>
+                    <div class="radio-options">
+                        <label for="read">
+                            <input type="radio" id="read" name="status" value="read" required> Read
+                        </label>
+                        <label for="unread">
+                            <input type="radio" id="unread" name="status" value="unread" required> Unread
+                        </label>
+                    </div>
+                </div>
+    
+                <!-- Submit Button -->
+                <button type="submit" id="submit_button">Create Book</button>
+    
+            </form>
+         </div>
+     </div>
     <!-- Sidebar -->
     <div class="sidebar">
         <h2>vision UI Free</h2>
