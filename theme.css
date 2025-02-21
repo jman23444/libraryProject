@@ -1,0 +1,73 @@
+/* variables */
+
+:root {
+
+    /* container styling */
+    --container-background-color: linear-gradient(127deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(14, 21, 58, 0.71) 91.2%);
+    --nested-container-background-color: linear-gradient(127deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+    --container-background-effect: blur(60px);
+  
+    /* text color */
+    --green-text: #01B574;
+    --grey-text: #A0AEC0;
+    --primary-blue: #0075FF;
+    --primary-red: #E31A1A;
+    --nav-hover-color: #1A1F37;
+  
+    /* Text sizing */
+    --xs-text: 12px;
+    --sm-text: 14px;
+    --m-text:  16px;
+    --l-text: 18px;
+  
+    /* Bolding */
+    --font-bold: 600;
+    --font-regular: 400;
+  
+  }
+
+  
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+  
+html {
+    font-size: 16px; 
+    scroll-behavior: smooth;
+}
+  
+ 
+ul, ol {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+button, input, textarea, select {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+body {
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+  
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+  
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
