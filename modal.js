@@ -34,4 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     closeModal.addEventListener('click', () => {
         modalContainer.classList.remove('show');
     });
+
 });
+
