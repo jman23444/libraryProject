@@ -508,8 +508,39 @@ input.valid, textarea.valid {
 
 /* Content */
 
-.content-container {
+[id="default_text"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: poppins;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 14px */
+    letter-spacing: 2.52px;
+    background: linear-gradient(98deg, #FFF 70.67%, rgba(117, 122, 140, 0.00) 108.55%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     width: 100%;
+}
+
+#default_text {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#default_text.visible {
+    opacity: 1;
+}
+
+.content-container {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 80px);
     grid-area: content;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
@@ -520,10 +551,7 @@ input.valid, textarea.valid {
 }
 
 
-
-
-
-/*  */
+/* Book Styling */
 
 .book {
     background: var(--nested-container-background-color);
@@ -532,6 +560,30 @@ input.valid, textarea.valid {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+/* Fade-in effect when a book is added */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.book {
+    animation: fadeIn 0.2s ease-in-out; 
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Fade-out effect when a book is deleted */
+.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
 }
 
 .book p {
@@ -567,7 +619,6 @@ input.valid, textarea.valid {
     width: 100%;
     text-align: left;
 }
-
 
 /* Status Badge */
 

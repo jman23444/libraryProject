@@ -97,6 +97,15 @@
             </defs>
         </svg>
         <ul class="menu_list">
+            <li id="create-book">
+                <div class="icon-holder">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus">
+                        <path d="M5 12h14"/>
+                        <path d="M12 5v14"/>
+                    </svg>
+                </div>
+                <p class="menu-text">Create Book</p>
+            </li>
             <li id="book-shelf">
                 <div class="icon-holder">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -112,27 +121,6 @@
                     </svg>
                 </div>
                 <p class="menu-text">Book Shelf</p>
-            </li>
-            <li id="create-book">
-                <div class="icon-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5v14"/>
-                    </svg>
-                </div>
-                <p class="menu-text">Create Book</p>
-            </li>
-            <li id="remove-book">
-                <div class="icon-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2">
-                        <path d="M3 6h18"/>
-                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
-                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
-                        <line x1="10" x2="10" y1="11" y2="17"/>
-                        <line x1="14" x2="14" y1="11" y2="17"/>
-                    </svg>
-                </div>
-                <p class="menu-text">Remove Books</p>
             </li>
         </ul>
     </div>
@@ -183,46 +171,8 @@
     </div>
     <!-- Content -->
      <div class="content-container">
-        <!-- Test Container -->
-        <div class="book">
-            <div id="book-controls">
-                <div id="status-badge" class="read badge">
-                    <p id="status-text">Read</p>
-                        <svg id="read-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check">
-                            <path d="M20 6 9 17l-5-5"/>
-                        </svg>
-                        <svg id="unread-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
-                            <path d="M18 6 6 18"/>
-                            <path d="m6 6 12 12"/>
-                        </svg>
-                </div>
-                <button id="delete-book-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2">
-                        <path d="M3 6h18"/>
-                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
-                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
-                        <line x1="10" x2="10" y1="11" y2="17"/>
-                        <line x1="14" x2="14" y1="11" y2="17"/>
-                    </svg>
-                </button>
-            </div>
-            <h3 class="book-title">The Great Gatsby</h3>
-            <div class="info-container">
-                <p>Author's Name:</p>
-                <p class="grey" id="author-name">J.R.R Brown</p>
-            </div>
-            <div class="info-container">
-                <p>Number of Pages:</p>
-                <p class="grey" id="page-count">299</p>
-            </div>
-            <div class="info-container">
-                <p>Description:</p>
-                <p class="grey" id="book-description">This book is absolutely amazing! 
-                    Every time you read it makes you feel like a million bucks! 
-                    Keep reading and you'll become a billionaire!
-                </p>
-            </div>
-        </div>
+        <!-- default Container -->
+        <h2 id="default_text">Your Library Is Empty</h2>
      </div>
 </body>
 </html>

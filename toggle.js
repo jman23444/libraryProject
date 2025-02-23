@@ -1,34 +1,26 @@
 //  Toggle Functionality
 
 document.addEventListener("DOMContentLoaded", function () {
-    // 
-    const statusBadge = document.getElementById("status-badge");
-    const statusText = document.getElementById("status-text");
-    const readIcon = document.getElementById("read-icon");
-    const unreadIcon = document.getElementById("unread-icon");
-    // 
-    if (statusBadge.classList.contains("read")) {
-        readIcon.style.display = "block";
-        unreadIcon.style.display = "none";
-    } else {
-        readIcon.style.display = "none";
-        unreadIcon.style.display = "block";
-    }
+    document.addEventListener("click", function (event) {
+        const statusBadge = event.target.closest("#status-badge");
+        if (statusBadge) {
+            const statusText = statusBadge.querySelector("#status-text");
+            const readIcon = statusBadge.querySelector("#read-icon");
+            const unreadIcon = statusBadge.querySelector("#unread-icon");
 
-    // Toggle function
-    statusBadge.addEventListener("click", function () {
-        if (statusBadge.classList.contains("read")) {
-            statusBadge.classList.remove("read");
-            statusBadge.classList.add("unread");
-            statusText.textContent = "Unread";
-            readIcon.style.display = "none";
-            unreadIcon.style.display = "block";
-        } else {
-            statusBadge.classList.remove("unread");
-            statusBadge.classList.add("read");
-            statusText.textContent = "Read";
-            readIcon.style.display = "block";
-            unreadIcon.style.display = "none";
+            if (statusBadge.classList.contains("read")) {
+                statusBadge.classList.remove("read");
+                statusBadge.classList.add("unread");
+                statusText.textContent = "Unread";
+                readIcon.style.display = "none";
+                unreadIcon.style.display = "block";
+            } else {
+                statusBadge.classList.remove("unread");
+                statusBadge.classList.add("read");
+                statusText.textContent = "Read";
+                readIcon.style.display = "block";
+                unreadIcon.style.display = "none";
+            }
         }
     });
 });
